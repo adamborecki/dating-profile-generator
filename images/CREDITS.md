@@ -41,6 +41,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 37-video-switcher-multiview-monitor.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 38-ptz-camera.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 39-dmx-cable.png | OpenAI built-in image generation | 2026-10-26 | Based on instructor-supplied reference photo; review pending |
+| 40-stage-light.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 41-iec-c13-power-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 42-edison-wall-plug.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos

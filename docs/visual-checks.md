@@ -99,3 +99,14 @@ All are1024x1024 PNGs without visible text or logos. Real-photo comparison pendi
 ## Digital stage-box revision
 
 21: eight XLR inputs with three socket holes each, eight per-channel phantom-power LEDs (three illuminated), IEC C14 inlet with three blades, and network cable exiting boot inline before a smooth bend. Generic simplified AES50-inspired enclosure; not a literal SD8 port layout. Supersedes earlier no-power/no-LED version.
+
+## Batch 8
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 39 | Five-pin XLR DMX | Five slender gold pin tips in black circular shell; rebuilt from instructor photo after initial pin layout rejected. Molded emblem removed. Instructor review pending. |
+| 40 | Fresnel rings, yoke, barn doors | Concentric lens rings, mounting yoke and four barn-door leaves visible. |
+| 41 | C13 female, three rectangular slots | Three recessed rectangular openings in triangle, chamfered upper housing corners, no projecting pins. |
+| 42 | Two flat blades and round ground | Two parallel flat blades and one cylindrical ground pin visible. |
+
+All32 portrait files are1024x1024 PNGs. New batch has no visible labels or logos. Real-photo comparison pending except DMX reference-based visual comparison.
