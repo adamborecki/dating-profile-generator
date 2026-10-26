@@ -31,3 +31,15 @@ These checks describe visible features in the generated artwork, not validation 
 | 14 | DI box | Two quarter-inch jacks; XLR output; ground-lift switch | Met visually: two quarter-inch sockets, one three-pin male XLR and one toggle switch. Port roles and ground-lift function are implied because labels are omitted. |
 
 All four: no visible text or logos; square 1024 × 1024 PNGs. Modern artist references use original compositions. Real-photo comparison is pending.
+
+## Batch 4 and MIDI refinement
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 12 | Five pins, 180-degree arc, matched shell clearance, longer shafts | Five long pins restored on upper semicircle with no center contact; circular face and left/right arrangement more balanced. Exact equidistance is not certified; instructor review pending. Supersedes earlier shorter-pin revision. |
+| 15 | Ball grille, tapered black body, XLR base | Met: ball mesh grille, tapered black body, three pins visible at base. |
+| 16 | Faders, channel strips, screen | Met: aligned fader tracks/caps, channel controls and color screen. Cleanup removed label-like marks. |
+| 17 | Bodypack antenna, rack receiver | Met: distinct antenna-equipped bodypack, rack ears and receiver antennas. Cleanup removed label-like marks. |
+| 18 | Clear shell, eight conductors, plastic latch | Met visually: eight parallel gold contacts and eight conductors, clear plastic latch, no metal shielding wrap. |
+
+Final files are 1024 × 1024 PNGs with no visible text or logos. Real-photo comparison remains pending.
