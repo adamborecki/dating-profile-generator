@@ -51,6 +51,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 22-network-switch.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 43-cable-trunk-concert-load-in.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 25-usb-mini-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 27-usb-3-0-micro-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 29-thunderbolt-3-plus-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 30-thunderbolt-1-2-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos

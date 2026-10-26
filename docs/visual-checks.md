@@ -121,3 +121,14 @@ All32 portrait files are1024x1024 PNGs. New batch has no visible labels or logos
 | 22 | RJ45 row, status lights | Eight rectangular RJ45 ports with paired indicator lights visible. |
 
 All are1024x1024 PNGs without visible text or logos. Real-photo comparison pending. All33 starred roster entries now have portraits.
+
+## Batch 10
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 25 | Mini-B keyed shell, five contacts | Five contacts and compact keyed Mini-B-like silhouette visible. Exact shell contour requires real-photo comparison. |
+| 27 | Wide two-part Micro-B3 shell | Two adjoining sections with central step; five contacts per section after correction. Unwanted lightning symbol removed. |
+| 29 | USB-C shape and bolt | Symmetrical rounded USB-C shell, mirrored interior contacts and single bolt on grip. |
+| 30 | Mini DisplayPort shape and bolt | Rectangular beveled shell and bolt on white grip; fine contact geometry not certified. |
+
+Final files1024x1024. No visible text or logos; bolt exception used only on29/30. Real-photo comparison pending.
