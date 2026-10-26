@@ -95,3 +95,7 @@ Instructor approved the single-photo-based, horizontally mirrored Micro-B portra
 | 38 | Domed robotic pan/tilt camera | Met: rounded head/lens, two-arm tilt yoke, cylindrical pan base. |
 
 All are1024x1024 PNGs without visible text or logos. Real-photo comparison pending for this batch.
+
+## Digital stage-box revision
+
+21: eight XLR inputs with three socket holes each, eight per-channel phantom-power LEDs (three illuminated), IEC C14 inlet with three blades, and network cable exiting boot inline before a smooth bend. Generic simplified AES50-inspired enclosure; not a literal SD8 port layout. Supersedes earlier no-power/no-LED version.
