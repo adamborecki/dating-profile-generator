@@ -62,9 +62,13 @@ All final images are 1024 × 1024 PNGs without visible text or logos. Modern art
 
 | ID | Required features | Observed |
 | --- | --- | --- |
-| 24 | Standard-B square opening with beveled upper corners | Met visually: beveled square shell, four flat contacts; initial projecting-post version rejected. |
+| 24 | Standard-B square opening with beveled upper corners | Superseded by photo-based correction below: beveled square shell retained, exposed contact-teeth interpretation rejected. |
 | 26 | Thin Micro-B trapezoid and two hooks | Met visually: thin mating outline, five contacts and two visible retention hooks. |
 | 28 | Rounded, reversible, symmetrical USB-C | Met visually: rounded oblong metal shell and mirrored interior contact structures. |
 | 33 | Full-size HDMI trapezoid, nineteen contacts | Met visually after two corrections: ten upper contacts plus nine lower contacts, nineteen total. |
 
 Final PNGs are 1024 × 1024 without visible text or logos. MIDI remains unchanged from the instructor-approved photo-based version. All technical checks are visual, with real-photo comparison pending for this batch.
+
+## USB-B photo-based correction
+
+24-usb-b-2-0.png was revised against two instructor-supplied photos. The mating end now has a recessed cavity and white plastic bridge, without exposed upper contact teeth. Contacts are mostly obscured at this viewing angle; the earlier four-visible-contact claim is withdrawn. Square 1024 × 1024 PNG; no visible text or logos. Instructor review pending.

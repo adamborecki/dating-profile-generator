@@ -31,7 +31,7 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 21-digital-stage-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 23-usb-a.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
-| 24-usb-b-2-0.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 24-usb-b-2-0.png | OpenAI built-in image generation; photo-based correction | 2026-10-26 | Compared visually with two instructor-supplied connector photos; instructor review pending |
 | 26-usb-micro-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 28-usb-c.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 33-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
