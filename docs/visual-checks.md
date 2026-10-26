@@ -132,3 +132,15 @@ All are1024x1024 PNGs without visible text or logos. Real-photo comparison pendi
 | 30 | Mini DisplayPort shape and bolt | Rectangular beveled shell and bolt on white grip; fine contact geometry not certified. |
 
 Final files1024x1024. No visible text or logos; bolt exception used only on29/30. Real-photo comparison pending.
+
+## Batch 11 and USB3 Micro-B correction
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 27 | Photo-matched unequal sections and corners | Wider Micro-B section, narrower extension and central step rebuilt from supplied photo; five contacts per section after cleanup. Instructor review pending. |
+| 31 | FireWire400 six-contact keyed outline | Six contacts and a one-end-tapered rectangular shell visible. Precise internal geometry requires real-photo comparison. |
+| 32 | FireWire800 squarish keyed outline | Nine contacts, squarish outline and offset step visible. Precise internal keying requires real-photo comparison. |
+| 35 | Tiny flat Micro HDMI | Small flat HDMI-family plug within ornamented border; nineteen fine contacts not certified at this scale. |
+| 44 | Projector body, lens, beam | Recognizable projector, one lens and a beam onto a luminous wall. |
+
+All44 roster entries now have1024x1024 PNGs, alt text, art notes and credit records. Complete coverage does not imply instructor approval of every connector geometry. Reference photos remain separately sourced.

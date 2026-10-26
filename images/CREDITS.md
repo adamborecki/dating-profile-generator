@@ -52,9 +52,14 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 43-cable-trunk-concert-load-in.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
 | 25-usb-mini-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
-| 27-usb-3-0-micro-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 27-usb-3-0-micro-b.png | OpenAI built-in image generation; photo-based corner correction | 2026-10-26 | Compared visually with instructor-supplied reference; instructor review pending |
 | 29-thunderbolt-3-plus-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 30-thunderbolt-1-2-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
+| 31-firewire-400.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 32-firewire-800.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 35-micro-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 44-projector.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
 ## 📷 Real reference photos (`images/photos/`)
 
