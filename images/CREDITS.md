@@ -31,6 +31,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 21-digital-stage-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 23-usb-a.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 24-usb-b-2-0.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 26-usb-micro-b.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 28-usb-c.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 33-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos
