@@ -27,7 +27,7 @@ These checks describe visible features in the generated artwork, not validation 
 | --- | --- | --- | --- |
 | 10 | Coiled cable | Rigid accurate plugs; only coil melts | Met: both TS plugs are straight, each has one insulating ring; central coil loops soften and drip over the branch. |
 | 11 | Analog snake and stage box | Metal box; rows of XLR jacks; thick multicore | Met: two rows of four jacks, each showing three sockets, and thick multicore exiting a side strain relief. |
-| 12 | DIN MIDI | Five pins in a semicircle; key notch; round shell | Met visually: five separate pins along a semicircular arc, no center pin, round metal shell and bottom key notch. |
+| 12 | DIN MIDI | Five pins in a semicircle; key notch; round shell | Revised after instructor feedback: the original arc was too shallow. Five shorter pins now form a deeper, more evenly spaced half-circle with the outer contacts lower and farther apart; round shell and bottom key notch retained. Visual approximation, not a dimensional check. |
 | 14 | DI box | Two quarter-inch jacks; XLR output; ground-lift switch | Met visually: two quarter-inch sockets, one three-pin male XLR and one toggle switch. Port roles and ground-lift function are implied because labels are omitted. |
 
 All four: no visible text or logos; square 1024 × 1024 PNGs. Modern artist references use original compositions. Real-photo comparison is pending.

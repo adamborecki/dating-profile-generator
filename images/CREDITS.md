@@ -18,7 +18,7 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 
 | 10-coiled-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 11-analog-multicore-snake-and-stage-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
-| 12-5-pin-din-midi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 12-5-pin-din-midi.png | OpenAI built-in image generation; pin-spacing revision | 2026-10-26 | Compared visually with RND 180-degree drawing; real-photo comparison pending |
 | 14-di-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
 ## 📷 Real reference photos (`images/photos/`)
