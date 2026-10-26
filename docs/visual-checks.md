@@ -43,3 +43,17 @@ All four: no visible text or logos; square 1024 × 1024 PNGs. Modern artist refe
 | 18 | Clear shell, eight conductors, plastic latch | Met visually: eight parallel gold contacts and eight conductors, clear plastic latch, no metal shielding wrap. |
 
 Final files are 1024 × 1024 PNGs with no visible text or logos. Real-photo comparison remains pending.
+
+## Batch 5 and photo-based MIDI replacement
+
+The MIDI observations below supersede earlier MIDI geometry checks. The user-supplied photograph was used directly as the technical reference; it is not republished as a repository photo asset.
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 12 | Five-pin arc, radial placement and shell proportions from supplied photo | Five visible pins, photo-matched viewing angle, inset black contact face, thin shell and lower keying feature. Entire connector rebuilt from photo; instructor review pending. |
+| 19 | Metal-shielded shell, eight contacts, latch; pose matches 18 | Met visually: eight gold contacts, metal wrap and clear latch; same rear-upper-left/nose-lower-right pose. |
+| 20 | Round protective shell around RJ45 | Met visually: rectangular eight-contact modular plug within rugged round shell; no XLR pins. Initial nine-contact variant rejected and corrected to eight. |
+| 21 | XLR inputs, single network connection | Met visually: eight XLR inputs with three sockets each, one connected Ethernet port and one diagonal cable. |
+| 23 | Rectangular USB-A, one-way tongue | Met visually: rectangular metal shell, one offset plastic tongue, four gold contacts. |
+
+All final images are 1024 × 1024 PNGs without visible text or logos. Modern artist references use original compositions.
