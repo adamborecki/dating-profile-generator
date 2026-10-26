@@ -12,6 +12,6 @@ MUS 248 students can use the supplied portraits in an AI-free browser-based gene
 - [`images/photos/`](images/photos/): real reference photos, to be sourced separately.
 - [`docs/`](docs/): original brief, generation prompts, and visual checks.
 
-Thirty-two portraits are supplied: 01–06, 08–12, 14–21, 23–24, 26, 28, 33–34, and 36–42. A manifest entry reserves a filename; it does not mean that image has been generated. Starred roster entries are prioritized. Each finished profile should include a real reference photo alongside its art portrait. The portraits have been visually inspected, but comparison against real reference photos remains pending except for MIDI, which was rebuilt using an instructor-supplied connector photo and awaits instructor review.
+Thirty-six portraits are supplied: 01–24, 26, 28, 33–34, and 36–43. All 33 starred entries are complete; eight additional roster portraits remain. A manifest entry reserves a filename; it does not mean that image has been generated. Starred roster entries are prioritized. Each finished profile should include a real reference photo alongside its art portrait. The portraits have been visually inspected, but comparison against real reference photos remains pending except for MIDI, which was rebuilt using an instructor-supplied connector photo and awaits instructor review.
 
 Museum notes are planning notes to confirm before publication; collection membership does not guarantee that an artwork is on view.

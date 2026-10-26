@@ -46,6 +46,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 41-iec-c13-power-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 42-edison-wall-plug.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 07-3-5mm-trrs-headset-plug.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 13-toslink-optical.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 22-network-switch.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 43-cable-trunk-concert-load-in.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos

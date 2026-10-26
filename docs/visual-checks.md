@@ -110,3 +110,14 @@ All are1024x1024 PNGs without visible text or logos. Real-photo comparison pendi
 | 42 | Two flat blades and round ground | Two parallel flat blades and one cylindrical ground pin visible. |
 
 All32 portrait files are1024x1024 PNGs. New batch has no visible labels or logos. Real-photo comparison pending except DMX reference-based visual comparison.
+
+## Batch 9
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 43 | Road case, coiled cables, mic stands | Met: reinforced open case with casters, cable coils and microphone boom stands. |
+| 07 | Three insulating rings | Three black insulators visible on foreground TRRS plug; tiny mirror reflection is decorative and not a technical reference. |
+| 13 | Squarish keyed optical plug, red tip glow | Squarish keyed shell and translucent red-lit optical tip visible; precise ferrule proportions require real-photo comparison. |
+| 22 | RJ45 row, status lights | Eight rectangular RJ45 ports with paired indicator lights visible. |
+
+All are1024x1024 PNGs without visible text or logos. Real-photo comparison pending. All33 starred roster entries now have portraits.
