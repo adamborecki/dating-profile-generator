@@ -20,3 +20,14 @@ These checks describe visible features in the generated artwork, not validation 
 | 09 | speakON NL4 | Round body; twist-lock; no visible pins | Round keyed body, locking hardware, and recessed mating face are shown without projecting pins; exact internal keying needs real-photo comparison. |
 
 - 05 TS speaker cable: one black insulating ring, continuous sleeve, and thick heavy cable are visible.
+
+## Batch 3
+
+| ID | Gear | Required feature | Observed |
+| --- | --- | --- | --- |
+| 10 | Coiled cable | Rigid accurate plugs; only coil melts | Met: both TS plugs are straight, each has one insulating ring; central coil loops soften and drip over the branch. |
+| 11 | Analog snake and stage box | Metal box; rows of XLR jacks; thick multicore | Met: two rows of four jacks, each showing three sockets, and thick multicore exiting a side strain relief. |
+| 12 | DIN MIDI | Five pins in a semicircle; key notch; round shell | Met visually: five separate pins along a semicircular arc, no center pin, round metal shell and bottom key notch. |
+| 14 | DI box | Two quarter-inch jacks; XLR output; ground-lift switch | Met visually: two quarter-inch sockets, one three-pin male XLR and one toggle switch. Port roles and ground-lift function are implied because labels are omitted. |
+
+All four: no visible text or logos; square 1024 × 1024 PNGs. Modern artist references use original compositions. Real-photo comparison is pending.

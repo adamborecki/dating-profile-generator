@@ -16,6 +16,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 08-rca-stereo-pair.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 09-speakon-nl4.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 10-coiled-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 11-analog-multicore-snake-and-stage-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 12-5-pin-din-midi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 14-di-box.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos
