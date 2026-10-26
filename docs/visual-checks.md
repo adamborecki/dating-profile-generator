@@ -72,3 +72,7 @@ Final PNGs are 1024 × 1024 without visible text or logos. MIDI remains unchange
 ## USB-B photo-based correction
 
 24-usb-b-2-0.png was revised against two instructor-supplied photos. The mating end now has a recessed cavity and white plastic bridge, without exposed upper contact teeth. Contacts are mostly obscured at this viewing angle; the earlier four-visible-contact claim is withdrawn. Square 1024 × 1024 PNG; no visible text or logos. Instructor review pending.
+
+## USB-B proportions: latest correction
+
+Supersedes the prior USB-B bridge revision, which the instructor rejected. The latest supplied photo is the technical reference. The image now shows a slimmer metal sleeve, photo-matched opening proportions, white insulating contour and two visible long contact strips. No horizontal shelf across the middle. Visible contacts are intentional; not all four are forced into view. Art style preserved. Instructor review pending.
