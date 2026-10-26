@@ -1,15 +1,17 @@
 # dating-profile-generator
 tech exercise for class -- make an html file using tech gear "dating profile generator"
 
-## Gear portrait library
+## Images
 
-MUS 248 students can use the supplied portraits in an AI-free, browser-based gear dating profile generator. The artwork was generated in advance; using the image files requires no AI service, account, or API call.
+MUS 248 students can use the supplied portraits in an AI-free browser-based generator. The artwork was generated in advance; using these files requires no AI service, account, or API call.
 
-- Portraits: [`assets/gear/`](assets/gear/), square 1024 × 1024 PNG files.
-- Profile metadata: [`assets/gear/manifest.csv`](assets/gear/manifest.csv), with one row per portrait, gear-first alt text, an art-history note, and optional local museum context.
-- Final 44-item roster and image requirements: [`docs/image-brief.md`](docs/image-brief.md).
-- Generation prompts and visual checks: [`docs/`](docs/).
+- [`images/ROSTER.md`](images/ROSTER.md): all 44 gear/art pairings and required technical details.
+- [`images/manifest.csv`](images/manifest.csv): the complete roster, canonical filenames, and alt text and art notes for completed portraits.
+- [`images/CREDITS.md`](images/CREDITS.md): generation credits and separately sourced real-photo credits.
+- [`images/art/`](images/art/): completed 1024 × 1024 art portraits, named exactly as in the manifest.
+- [`images/photos/`](images/photos/): real reference photos, to be sourced separately.
+- [`docs/`](docs/): original brief, generation prompts, and visual checks.
 
-Roster numbers are stable. Gaps in filenames represent portraits still to be made; starred entries in the brief are prioritized. Art references are creative interpretations. Museum notes are supplied planning notes and need confirmation before publication; collection membership does not guarantee an artwork is on view.
+Eight portraits are supplied: 01–06, 08, and 09. A manifest entry reserves a filename; it does not mean that image has been generated. Starred roster entries are prioritized. Each finished profile should include a real reference photo alongside its art portrait. The portraits have been visually inspected, but comparison against real reference photos remains pending.
 
-These are stylized teaching illustrations. Each finished profile should also include a real reference photo, sourced separately, so students can compare the illustrated connector with the real gear.
+Museum notes are planning notes to confirm before publication; collection membership does not guarantee that an artwork is on view.
