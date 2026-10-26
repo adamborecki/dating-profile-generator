@@ -76,3 +76,7 @@ Final PNGs are 1024 × 1024 without visible text or logos. MIDI remains unchange
 ## USB-B proportions: latest correction
 
 Supersedes the prior USB-B bridge revision, which the instructor rejected. The latest supplied photo is the technical reference. The image now shows a slimmer metal sleeve, photo-matched opening proportions, white insulating contour and two visible long contact strips. No horizontal shelf across the middle. Visible contacts are intentional; not all four are forced into view. Art style preserved. Instructor review pending.
+
+## Micro-B edge correction
+
+26-usb-micro-b.png revised using three instructor-supplied references. Upper-corner chamfers and short side walls replace the previous top-and-bottom bevels; bottom corners nearly square. Five contacts and two retention hooks visible. Woodblock composition preserved. Instructor review pending.
