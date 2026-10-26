@@ -36,6 +36,11 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 28-usb-c.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 | 33-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
+| 34-mini-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 36-sdi-video-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 37-video-switcher-multiview-monitor.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 38-ptz-camera.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+
 ## 📷 Real reference photos (`images/photos/`)
 
 Use manufacturer press/media kits first, then manufacturer product pages. Skip retailer photos

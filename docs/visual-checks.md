@@ -84,3 +84,14 @@ Supersedes the prior USB-B bridge revision, which the instructor rejected. The l
 ## Approved Micro-B replacement
 
 Instructor approved the single-photo-based, horizontally mirrored Micro-B portrait on 2026-10-26. This replaces every earlier Micro-B geometry revision. Five contacts visible. Earlier generated artwork excluded as geometry reference.
+
+## Batch 7
+
+| ID | Required features | Observed |
+| --- | --- | --- |
+| 34 | Mini HDMI smaller than full-size HDMI, family shape | Met visually: two distinct sizes, keyed HDMI-family shells. Fine contact counts not certified at this scale. |
+| 36 | Round bayonet coupling and center pin | Met visually: one center pin, circular sleeve, opposing entry slots; extra bottom slot removed. Exact locking-track geometry requires real-photo comparison. |
+| 37 | Four to eight camera tiles on one monitor | Met: six camera views, three columns by two rows, single bezel and stand. |
+| 38 | Domed robotic pan/tilt camera | Met: rounded head/lens, two-arm tilt yoke, cylindrical pan base. |
+
+All are1024x1024 PNGs without visible text or logos. Real-photo comparison pending for this batch.
