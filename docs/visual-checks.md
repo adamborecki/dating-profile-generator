@@ -80,3 +80,7 @@ Supersedes the prior USB-B bridge revision, which the instructor rejected. The l
 ## Micro-B edge correction
 
 26-usb-micro-b.png revised using three instructor-supplied references. Upper-corner chamfers and short side walls replace the previous top-and-bottom bevels; bottom corners nearly square. Five contacts and two retention hooks visible. Woodblock composition preserved. Instructor review pending.
+
+## Approved Micro-B replacement
+
+Instructor approved the single-photo-based, horizontally mirrored Micro-B portrait on 2026-10-26. This replaces every earlier Micro-B geometry revision. Five contacts visible. Earlier generated artwork excluded as geometry reference.
