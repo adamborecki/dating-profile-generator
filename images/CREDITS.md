@@ -57,9 +57,9 @@ listed in [`ROSTER.md`](ROSTER.md); none is a reproduction of the original artwo
 | 30-thunderbolt-1-2-cable.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
 
 | 31-firewire-400.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
-| 32-firewire-800.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 32-firewire-800.png | OpenAI built-in image generation; photo-based correction | 2026-10-26 | Compared with instructor photo; instructor review pending |
 | 35-micro-hdmi.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
-| 44-projector.png | OpenAI built-in image generation | 2026-10-26 | No; visual feature check only |
+| 44-projector.png | OpenAI built-in image generation; optical-direction correction | 2026-10-26 | Lens/beam alignment visually checked; instructor review pending |
 
 ## 📷 Real reference photos (`images/photos/`)
 

@@ -144,3 +144,9 @@ Final files1024x1024. No visible text or logos; bolt exception used only on29/30
 | 44 | Projector body, lens, beam | Recognizable projector, one lens and a beam onto a luminous wall. |
 
 All44 roster entries now have1024x1024 PNGs, alt text, art notes and credit records. Complete coverage does not imply instructor approval of every connector geometry. Reference photos remain separately sourced.
+
+## FireWire800 and projector corrections
+
+32: earlier broad stepped opening and thick gold contacts rejected. Connector rebuilt against instructor photo: narrow dark nose, thin internal frame, recessed keyed contact block. Visual comparison performed; exact internal contact assignment not certified.
+
+44: projector orientation adjusted to show lens as a side-facing ellipse aligned with forward beam; supersedes earlier lens-facing-viewer image. Both corrections await instructor review.
