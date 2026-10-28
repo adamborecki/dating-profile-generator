@@ -39,14 +39,11 @@
 
 <form id="dpg_form">
     <dl>
-        <dt><label for="picture">pick a picture</label></dt>
-        <!-- FYI, i forgot the syntax of <select>, so i typed that into google to get help. -->
-        <dd><select id="picture">
-            <optgroup>
-                <option value="dogcat.jpg"><img src="https://images.pdimagearchive.org/shop/nov-2023-prints-00040.jpg?width=200&height=80" alt="pic of dog and cat" /></option>
-                <option value="dogcat2.jpg"><img src="https://images.pdimagearchive.org/shop/nov-2023-prints-00040.jpg?width=200&height=80" alt="pic of dog and cat" /></option>
-            </optgroup>
-        </select></dd>
+        <dt><label for="picture">picture (filename)</label></dt>
+        <dd>
+            images/art/<input type="text" id="picture" name="picture" /><br />
+            Type in the exact filename of the picture. You can find a list of filenames here: <a href="https://github.com/adamborecki/dating-profile-generator/tree/main/images/art" target="_blank">https://github.com/adamborecki/dating-profile-generator/tree/main/images/art</a>
+        </dd>
         <dt>pick a gender</dt>
         <dd>
             <input type="radio" name="gender" value="male" id="iammale" />
