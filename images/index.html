@@ -42,22 +42,26 @@
   .lede { max-width: 620px; margin: 22px auto 0; color: var(--muted); font-size: 17px; }
 
   /* filters */
-  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 8px 20px 40px; }
+  nav { padding: 8px 20px 36px; }
+  .row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .row-label { width: 100%; text-align: center; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
   nav button { font: 500 13px var(--sans); color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
   nav button:hover { color: var(--ink); border-color: var(--muted); }
   nav button[aria-pressed="true"] { background: var(--ink); color: var(--wall); border-color: var(--ink); }
+  nav button .mi { opacity: .6; margin-left: 4px; }
+  .empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 40px 0; }
 
-  /* grid */
-  main { max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 48px 36px; }
-  .work { all: unset; cursor: zoom-in; display: block; }
-  .work .mat { background: var(--frame); padding: 14px; box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s; }
-  .work img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--rule); }
-  .work:hover .mat, .work:focus-visible .mat { transform: translateY(-4px); }
-  .work:focus-visible .mat { outline: 2px solid var(--accent); outline-offset: 4px; }
-  .label { margin-top: 14px; }
-  .label .gear { font: 600 22px/1.15 var(--serif); }
-  .label .style { font-size: 13px; color: var(--muted); margin-top: 3px; }
-  .label .no { font-size: 11px; letter-spacing: .14em; color: var(--muted); }
+  /* grid: edge to edge, at least three squares per row */
+  main { max-width: 1800px; margin: 0 auto; padding: 0 0 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(30%, 300px), 1fr)); gap: 3px; }
+  .work { all: unset; cursor: zoom-in; display: block; position: relative; aspect-ratio: 1; overflow: hidden; background: var(--rule); }
+  .work img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .4s; }
+  .work .hover { position: absolute; inset: auto 0 0 0; padding: 40px 14px 12px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; opacity: 0; transition: opacity .25s; pointer-events: none; }
+  .work .hover b { display: block; font: 600 20px/1.15 var(--serif); }
+  .work .hover span { font-size: 12px; opacity: .85; }
+  .work:hover .hover, .work:focus-visible .hover { opacity: 1; }
+  .work:hover img { transform: scale(1.02); }
+  .work:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+  @media (hover: none) { .work .hover { display: none; } }
   .work[hidden] { display: none; }
 
   footer { border-top: 1px solid var(--rule); max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; font-size: 13px; color: var(--muted); text-align: center; }
@@ -90,10 +94,17 @@
   .lb-info dd { margin: 0; color: #eee9df; }
   .lb-info .pairs a { color: #f0a47f; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
   .lb-info .full { display: inline-block; margin-top: 34px; color: #f0a47f; font-size: 14px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .links a { color: #eee9df; text-decoration: none; font-size: 14px; border: 1px solid #45413a; border-radius: 999px; padding: 6px 13px; }
+  .links a:hover { border-color: #f0a47f; color: #f0a47f; }
+  .museum { border: 1px solid #34312c; border-radius: 6px; padding: 16px 18px; margin-top: 12px; }
+  .museum .name { font: 600 21px/1.2 var(--serif); color: #eee9df; }
+  .museum .where { font-size: 14px; color: #8f897e; margin: 2px 0 10px; }
+  .museum dl { font-size: 15px; }
+  .lb-info .fine { font-size: 13px; color: #8f897e; margin-top: 10px; }
 
   @media (max-width: 640px) {
     header { padding-top: 48px; }
-    main { grid-template-columns: 1fr; gap: 40px; padding: 0 16px 60px; }
     .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; }
     .lb-stage img { max-height: calc(100svh - 240px); }
     .lb-info dl { grid-template-columns: 1fr; gap: 2px; }
@@ -107,7 +118,7 @@
 <header>
   <p class="kicker">MUS 248 · A gallery of concert gear</p>
   <h1>Gear in the Style of <span class="who">Van Gogh</span></h1>
-  <p class="lede">Forty-four pieces of concert gear, each sitting for a portrait in the manner of a different artist or movement. Learn to tell an XLR from a speakON, and a Vermeer from a Warhol, at the same time.</p>
+  <p class="lede">Concert gear, each sitting for a portrait in the manner of a different artist or movement. Learn to tell an XLR from a speakON, and a Vermeer from a Warhol, at the same time.</p>
 </header>
 
 <nav id="filters" aria-label="Filter by category"></nav>
@@ -148,6 +159,42 @@ const PAIRS = [
   [[28, 29, 30], "USB-C vs. Thunderbolt 3+ (same shape) vs. Thunderbolt 1/2."],
   [[1, 2, 39], "Mic XLR vs. 5-pin DMX."],
 ];
+// Museums named in manifest.csv's museum_note. Miles and times are rough estimates from Chapman University.
+const CHAPMAN = "Chapman University, Orange, CA";
+const MUSEUMS = {
+  hilbert: { match: /Hilbert/, name: "Hilbert Museum of California Art", short: "Hilbert Museum", where: "Orange, next to campus",
+    site: "hilbertmuseum.org", maps: "Hilbert Museum of California Art, Orange, CA", miles: 0.3,
+    drive: "No need: about a 5-minute walk", transit: "Walk. It's across from the Orange Metrolink station." },
+  ocma: { match: /OCMA/, name: "Orange County Museum of Art", short: "OCMA", where: "Costa Mesa, at Segerstrom Center",
+    site: "ocma.art", maps: "Orange County Museum of Art, Costa Mesa, CA", miles: 11,
+    drive: "About 20 minutes", transit: "Yes: OCTA bus, about 1 hour" },
+  broad: { match: /The Broad/, name: "The Broad", short: "The Broad", where: "Downtown Los Angeles",
+    site: "thebroad.org", maps: "The Broad, 221 S Grand Ave, Los Angeles, CA", miles: 33,
+    drive: "45–75 minutes", transit: "Yes: Metrolink from Orange to Union Station, then Metro to Grand Av Arts/Bunker Hill. About 1.5–2 hours." },
+  moca: { match: /MOCA/, name: "MOCA Grand Avenue", short: "MOCA", where: "Downtown Los Angeles",
+    site: "moca.org", maps: "MOCA Grand Avenue, 250 S Grand Ave, Los Angeles, CA", miles: 33,
+    drive: "45–75 minutes", transit: "Yes: Metrolink from Orange to Union Station, then Metro to Grand Av Arts/Bunker Hill. About 1.5–2 hours." },
+  lacma: { match: /LACMA/, name: "Los Angeles County Museum of Art", short: "LACMA", where: "Mid-Wilshire, Los Angeles",
+    site: "lacma.org", maps: "LACMA, 5905 Wilshire Blvd, Los Angeles, CA", miles: 38,
+    drive: "50–90 minutes", transit: "Yes: Metrolink from Orange to Union Station, then Metro D Line west toward Wilshire. About 2–2.5 hours." },
+  norton: { match: /Norton Simon/, name: "Norton Simon Museum", short: "Norton Simon", where: "Pasadena",
+    site: "nortonsimon.org", maps: "Norton Simon Museum, Pasadena, CA", miles: 40,
+    drive: "50–80 minutes", transit: "Yes: Metrolink from Orange to Union Station, then Metro A Line to Memorial Park. About 2–2.5 hours." },
+  getty: { match: /Getty(?! Villa)/, name: "Getty Center", short: "Getty Center", where: "Brentwood, Los Angeles",
+    site: "getty.edu", url: "https://www.getty.edu/visit/center/", maps: "Getty Center, 1200 Getty Center Dr, Los Angeles, CA", miles: 48,
+    drive: "60–100 minutes (admission free, parking paid)", transit: "Possible but long: Metrolink, Metro and a bus to the tram. About 2.5–3 hours." },
+  villa: { match: /Getty Villa/, name: "Getty Villa", short: "Getty Villa", where: "Pacific Palisades",
+    site: "getty.edu", url: "https://www.getty.edu/visit/villa/", maps: "Getty Villa, 17985 Pacific Coast Hwy, Pacific Palisades, CA", miles: 55,
+    drive: "75–110 minutes (free, timed-entry reservation)", transit: "Possible but long: Metrolink, Metro and a bus along PCH. 3+ hours." },
+};
+const MUSEUM_ORDER = Object.keys(MUSEUMS).sort((a, b) => MUSEUMS[a].miles - MUSEUMS[b].miles);
+
+const q = s => encodeURIComponent(s);
+const googleImages = s => `https://www.google.com/search?tbm=isch&q=${q(s)}`;
+const wikipedia = s => `https://en.wikipedia.org/w/index.php?search=${q(s)}`;
+const directions = (dest, mode) => `https://www.google.com/maps/dir/?api=1&origin=${q(CHAPMAN)}&destination=${q(dest)}&travelmode=${mode}`;
+const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener">${text} ↗</a>`;
+
 const ARTISTS = ["Van Gogh", "Vermeer", "Warhol", "Dalí", "Pollock", "Magritte", "Monet", "Hokusai",
   "Mondrian", "Hopper", "Seurat", "Rembrandt", "Kandinsky", "Degas", "Mucha", "Rothko", "Lichtenstein"];
 
@@ -188,6 +235,9 @@ function toWork(r) {
     accurate: r.must_be_accurate, museum: r.museum_note,
     alt: r.alt_text, note: r.art_note, core: r.core === "yes",
     category: (CATEGORIES.find(([, a, b]) => id >= a && id <= b) || ["Other"])[0],
+    museums: MUSEUM_ORDER.filter(k => MUSEUMS[k].match.test(r.museum_note)),
+    // "Getty Center (Irises)" -> "Irises": what to look for on the museum's site
+    museumWork: (r.museum_note.match(/\(([^)]*)\)/) || [, style.trim()])[1],
     thumb: "thumbs/" + r.art_file.replace(/\.png$/, ".jpg"),
     full: "art/" + r.art_file,
   };
@@ -195,33 +245,47 @@ function toWork(r) {
 
 function render() {
   $("grid").innerHTML = works.map((w, i) => `
-    <button class="work" data-i="${i}" data-cat="${esc(w.category)}" aria-label="${esc(w.gear)}, in the style of ${esc(w.style)}">
-      <div class="mat"><img src="${w.thumb}" alt="${esc(w.alt)}" loading="lazy" width="640" height="640"></div>
-      <div class="label">
-        <div class="no">No. ${w.id}</div>
-        <div class="gear">${esc(w.gear)}</div>
-        <div class="style">in the style of ${esc(w.style)}</div>
-      </div>
-    </button>`).join("");
+    <button class="work" data-i="${i}" aria-label="${esc(w.gear)}, in the style of ${esc(w.style)}">
+      <img src="${w.thumb}" alt="${esc(w.alt)}" loading="lazy" width="640" height="640">
+      <div class="hover"><b>${esc(w.gear)}</b><span>in the style of ${esc(w.style)}</span></div>
+    </button>`).join("") + `<p class="empty" hidden>Nothing matches both filters.</p>`;
 
   $("grid").querySelectorAll(".work").forEach(el => {
     const w = works[el.dataset.i], img = el.querySelector("img");
     // Fall back to the full PNG if a thumbnail is missing; hide the card if the art is missing too.
     img.onerror = () => {
       if (!img.dataset.fallback) { img.dataset.fallback = 1; img.src = w.full; }
-      else { el.hidden = true; w.missing = true; }
+      else { w.missing = true; applyFilters(); }
     };
     el.onclick = () => open(+el.dataset.i);
   });
 
-  const cats = ["All", ...CATEGORIES.map(c => c[0])];
-  $("filters").innerHTML = cats.map(c => `<button aria-pressed="${c === "All"}">${c}</button>`).join("");
-  $("filters").querySelectorAll("button").forEach(b => b.onclick = () => {
-    $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
-    $("grid").querySelectorAll(".work").forEach(el => {
-      el.hidden = works[el.dataset.i].missing || (b.textContent !== "All" && el.dataset.cat !== b.textContent);
-    });
+  const used = MUSEUM_ORDER.filter(k => works.some(w => w.museums.includes(k)));
+  $("filters").innerHTML = `
+    <div class="row" data-kind="cat">
+      ${["All", ...CATEGORIES.map(c => c[0])].map(c => `<button data-v="${c}" aria-pressed="${c === "All"}">${c}</button>`).join("")}
+    </div>
+    <div class="row" data-kind="museum">
+      <div class="row-label">See the real art · miles from Chapman</div>
+      <button data-v="" aria-pressed="true">Anywhere</button>
+      ${used.map(k => `<button data-v="${k}" aria-pressed="false">${MUSEUMS[k].short}<span class="mi">${MUSEUMS[k].miles} mi</span></button>`).join("")}
+    </div>`;
+  $("filters").querySelectorAll(".row").forEach(row => row.querySelectorAll("button").forEach(b => b.onclick = () => {
+    row.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    filter[row.dataset.kind] = b.dataset.v;
+    applyFilters();
+  }));
+}
+
+const filter = { cat: "All", museum: "" };
+function applyFilters() {
+  let shown = 0;
+  $("grid").querySelectorAll(".work").forEach(el => {
+    const w = works[el.dataset.i];
+    el.hidden = w.missing || (filter.cat !== "All" && w.category !== filter.cat) || (filter.museum && !w.museums.includes(filter.museum));
+    if (!el.hidden) shown++;
   });
+  $("grid").querySelector(".empty").hidden = shown > 0;
 }
 
 function open(i) {
@@ -282,12 +346,30 @@ function show(i) {
       <dt>Concept</dt><dd>${esc(w.concept)}</dd>
     </dl>
     <p style="margin-top:14px">${esc(w.note)}</p>
+    <div class="links">
+      ${link(googleImages(w.style), "See the original art")}
+      ${link(wikipedia(w.style), "Read about it on Wikipedia")}
+    </div>
 
     <h3>The gear: what to look for</h3>
     <p>${esc(w.accurate)}</p>
+    <div class="links">${link(googleImages(w.gear), "Photos of the real gear")}</div>
 
-    ${w.museum ? `<h3>See the real thing nearby</h3><p>${esc(w.museum)}</p>
-      <p style="font-size:14px;color:#8f897e;margin-top:6px">The artist or movement is in that collection; check the museum's site for what's on view.</p>` : ""}
+    ${w.museums.length ? `<h3>See the real art near Chapman</h3>
+      <p>${esc(w.museum)}</p>
+      ${w.museums.map(k => { const m = MUSEUMS[k]; return `
+        <div class="museum">
+          <div class="name">${m.name}</div>
+          <div class="where">${m.where} · about ${m.miles} mi from Chapman</div>
+          <dl><dt>Drive</dt><dd>${m.drive}</dd><dt>Transit</dt><dd>${m.transit}</dd></dl>
+          <div class="links">
+            ${link(m.url || `https://${m.site}`, "Museum website")}
+            ${link(`https://www.google.com/search?q=${q(w.museumWork + " site:" + m.site)}`, `Find “${esc(w.museumWork)}” there`)}
+            ${link(directions(m.maps, "transit"), "Transit directions")}
+            ${link(directions(m.maps, "driving"), "Driving directions")}
+          </div>
+        </div>`; }).join("")}
+      <p class="fine">The artist or movement is in that collection, which doesn't guarantee a work is on view. Miles and times are rough estimates from Chapman; check the museum's site and transit schedules before you go.</p>` : ""}
 
     ${pairs ? `<h3>Side by side</h3>${pairs}` : ""}
 
