@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gear in the Style of…</title>
+<meta name="description" content="44 pieces of concert gear, each painted in the style of a different artist or art movement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --wall: #f4f1ea;
+    --ink: #1d1b18;
+    --muted: #6d675d;
+    --rule: #d9d3c6;
+    --frame: #fff;
+    --accent: #9a3b1f;
+    --shadow: 0 1px 2px rgba(0,0,0,.08), 0 10px 30px rgba(40,30,10,.12);
+    --overlay: #0e0d0c;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: Inter, system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --wall: #1a1917; --ink: #eee9df; --muted: #a39d92; --rule: #34312c;
+      --frame: #26241f; --accent: #e08a62;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--wall); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); }
+
+  /* header */
+  header { max-width: 1100px; margin: 0 auto; padding: 72px 20px 32px; text-align: center; }
+  .kicker { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+  h1 { font: 500 clamp(40px, 7vw, 84px)/1.02 var(--serif); margin: 0; letter-spacing: -.01em; }
+  h1 .who { font-style: italic; color: var(--accent); display: inline-block; min-width: 4ch; transition: opacity .35s, transform .35s; }
+  h1 .who.out { opacity: 0; transform: translateY(8px); }
+  .lede { max-width: 620px; margin: 22px auto 0; color: var(--muted); font-size: 17px; }
+
+  /* filters */
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 8px 20px 40px; }
+  nav button { font: 500 13px var(--sans); color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+  nav button:hover { color: var(--ink); border-color: var(--muted); }
+  nav button[aria-pressed="true"] { background: var(--ink); color: var(--wall); border-color: var(--ink); }
+
+  /* grid */
+  main { max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 48px 36px; }
+  .work { all: unset; cursor: zoom-in; display: block; }
+  .work .mat { background: var(--frame); padding: 14px; box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s; }
+  .work img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--rule); }
+  .work:hover .mat, .work:focus-visible .mat { transform: translateY(-4px); }
+  .work:focus-visible .mat { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .label { margin-top: 14px; }
+  .label .gear { font: 600 22px/1.15 var(--serif); }
+  .label .style { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .label .no { font-size: 11px; letter-spacing: .14em; color: var(--muted); }
+  .work[hidden] { display: none; }
+
+  footer { border-top: 1px solid var(--rule); max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; font-size: 13px; color: var(--muted); text-align: center; }
+
+  /* lightbox */
+  .lb { position: fixed; inset: 0; z-index: 10; background: var(--overlay); color: #eee9df; overflow-y: auto; overscroll-behavior: contain; opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .lb.open { opacity: 1; pointer-events: auto; }
+  body.locked { overflow: hidden; }
+  .lb-stage { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 64px 16px 28px; }
+  .lb-stage img { max-width: min(92vw, 1024px); max-height: calc(100svh - 210px); width: auto; height: auto; aspect-ratio: 1; box-shadow: 0 20px 60px rgba(0,0,0,.6); background: #222; }
+  .lb-cap { text-align: center; margin-top: 22px; max-width: 760px; }
+  .lb-cap .gear { font: 500 clamp(26px, 4vw, 38px)/1.1 var(--serif); }
+  .lb-cap .style { color: #c9c2b4; margin-top: 4px; }
+  .lb-cap .style em { color: #f0a47f; font-style: normal; }
+  .more { margin-top: 18px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #8f897e; background: none; border: 0; cursor: pointer; animation: bob 2s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(4px); } }
+  .lb-btn { position: fixed; z-index: 11; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.08); color: #eee; font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+  .lb-btn:hover { background: rgba(255,255,255,.18); }
+  .lb-close { top: 14px; right: 14px; }
+  .lb-prev { left: 14px; top: 50vh; transform: translateY(-50%); }
+  .lb-next { right: 14px; top: 50vh; transform: translateY(-50%); }
+  .lb-count { position: fixed; top: 26px; left: 22px; font-size: 12px; letter-spacing: .16em; color: #8f897e; z-index: 11; }
+
+  .lb-info { max-width: 760px; margin: 0 auto; padding: 40px 20px 100px; border-top: 1px solid #34312c; }
+  .lb-info h2 { font: 500 30px/1.2 var(--serif); margin: 0 0 6px; }
+  .lb-info h3 { font: 600 11px var(--sans); letter-spacing: .2em; text-transform: uppercase; color: #8f897e; margin: 34px 0 8px; }
+  .lb-info p { margin: 0; color: #d9d3c6; font-size: 17px; }
+  .lb-info dl { display: grid; grid-template-columns: max-content 1fr; gap: 10px 22px; margin: 0; }
+  .lb-info dt { color: #8f897e; font-size: 14px; }
+  .lb-info dd { margin: 0; color: #eee9df; }
+  .lb-info .pairs a { color: #f0a47f; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .lb-info .full { display: inline-block; margin-top: 34px; color: #f0a47f; font-size: 14px; }
+
+  @media (max-width: 640px) {
+    header { padding-top: 48px; }
+    main { grid-template-columns: 1fr; gap: 40px; padding: 0 16px 60px; }
+    .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; }
+    .lb-stage img { max-height: calc(100svh - 240px); }
+    .lb-info dl { grid-template-columns: 1fr; gap: 2px; }
+    .lb-info dd { margin-bottom: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="kicker">MUS 248 · A gallery of concert gear</p>
+  <h1>Gear in the Style of <span class="who">Van Gogh</span></h1>
+  <p class="lede">Forty-four pieces of concert gear, each sitting for a portrait in the manner of a different artist or movement. Learn to tell an XLR from a speakON, and a Vermeer from a Warhol, at the same time.</p>
+</header>
+
+<nav id="filters" aria-label="Filter by category"></nav>
+<main id="grid" aria-live="polite"></main>
+
+<footer>
+  Every portrait is AI-generated and <em>inspired by</em> an artist or movement. None reproduces an original artwork.
+  Source data: <a href="manifest.csv">manifest.csv</a> · <a href="ROSTER.md">ROSTER.md</a> · <a href="CREDITS.md">CREDITS.md</a>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Artwork viewer" tabindex="-1">
+  <span class="lb-count" id="lbCount"></span>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">←</button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">→</button>
+  <section class="lb-stage">
+    <img id="lbImg" alt="">
+    <div class="lb-cap">
+      <div class="gear" id="lbGear"></div>
+      <div class="style" id="lbStyle"></div>
+    </div>
+    <button class="more" id="lbMore">Scroll for the full story ↓</button>
+  </section>
+  <section class="lb-info" id="lbInfo"></section>
+</div>
+
+<script>
+const CATEGORIES = [
+  ["Audio", 1, 17], ["Network", 18, 22], ["USB & computer", 23, 32],
+  ["Video", 33, 38], ["Lighting, power & venue", 39, 44],
+];
+// "Pairs worth showing side by side" from ROSTER.md
+const PAIRS = [
+  [[3, 5], "Same plug, very different job: instrument vs. speaker cable."],
+  [[18, 19], "Unshielded vs. shielded Ethernet, same pose."],
+  [[11, 21], "Analog snake (Pollock tangle) vs. digital snake (one Lissitzky line)."],
+  [[33, 34, 35], "The HDMI family, from full size to micro."],
+  [[28, 29, 30], "USB-C vs. Thunderbolt 3+ (same shape) vs. Thunderbolt 1/2."],
+  [[1, 2, 39], "Mic XLR vs. 5-pin DMX."],
+];
+const ARTISTS = ["Van Gogh", "Vermeer", "Warhol", "Dalí", "Pollock", "Magritte", "Monet", "Hokusai",
+  "Mondrian", "Hopper", "Seurat", "Rembrandt", "Kandinsky", "Degas", "Mucha", "Rothko", "Lichtenstein"];
+
+const $ = id => document.getElementById(id);
+let works = [], current = -1;
+const visible = () => [...$("grid").querySelectorAll(".work:not([hidden])")].map(el => +el.dataset.i);
+
+function parseCSV(text) {
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) {
+      if (c === '"' && text[i + 1] === '"') { f += '"'; i++; }
+      else if (c === '"') q = false;
+      else f += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(f); rows.push(row); row = []; f = "";
+    } else f += c;
+  }
+  if (f || row.length) { row.push(f); rows.push(row); }
+  const [head, ...body] = rows;
+  return body.filter(r => r.length > 1).map(r => Object.fromEntries(head.map((h, i) => [h, r[i] || ""])));
+}
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function toWork(r) {
+  const id = +r.id;
+  const [style, ...rest] = r.art_reference.split(":");
+  return {
+    id, file: r.art_file, gear: r.gear,
+    style: style.replace(/\s*\([^)]*"[^)]*\)/, "").trim(),
+    concept: rest.join(":").trim() || r.art_reference,
+    reference: r.art_reference,
+    accurate: r.must_be_accurate, museum: r.museum_note,
+    alt: r.alt_text, note: r.art_note, core: r.core === "yes",
+    category: (CATEGORIES.find(([, a, b]) => id >= a && id <= b) || ["Other"])[0],
+    thumb: "thumbs/" + r.art_file.replace(/\.png$/, ".jpg"),
+    full: "art/" + r.art_file,
+  };
+}
+
+function render() {
+  $("grid").innerHTML = works.map((w, i) => `
+    <button class="work" data-i="${i}" data-cat="${esc(w.category)}" aria-label="${esc(w.gear)}, in the style of ${esc(w.style)}">
+      <div class="mat"><img src="${w.thumb}" alt="${esc(w.alt)}" loading="lazy" width="640" height="640"></div>
+      <div class="label">
+        <div class="no">No. ${w.id}</div>
+        <div class="gear">${esc(w.gear)}</div>
+        <div class="style">in the style of ${esc(w.style)}</div>
+      </div>
+    </button>`).join("");
+
+  $("grid").querySelectorAll(".work").forEach(el => {
+    const w = works[el.dataset.i], img = el.querySelector("img");
+    // Fall back to the full PNG if a thumbnail is missing; hide the card if the art is missing too.
+    img.onerror = () => {
+      if (!img.dataset.fallback) { img.dataset.fallback = 1; img.src = w.full; }
+      else { el.hidden = true; w.missing = true; }
+    };
+    el.onclick = () => open(+el.dataset.i);
+  });
+
+  const cats = ["All", ...CATEGORIES.map(c => c[0])];
+  $("filters").innerHTML = cats.map(c => `<button aria-pressed="${c === "All"}">${c}</button>`).join("");
+  $("filters").querySelectorAll("button").forEach(b => b.onclick = () => {
+    $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    $("grid").querySelectorAll(".work").forEach(el => {
+      el.hidden = works[el.dataset.i].missing || (b.textContent !== "All" && el.dataset.cat !== b.textContent);
+    });
+  });
+}
+
+function open(i) {
+  show(i);
+  $("lb").classList.add("open");
+  document.body.classList.add("locked");
+  $("lb").focus();
+  history.replaceState(null, "", "#" + works[i].id);
+}
+
+function close() {
+  $("lb").classList.remove("open");
+  document.body.classList.remove("locked");
+  history.replaceState(null, "", location.pathname);
+  const card = $("grid").querySelector(`[data-i="${current}"]`);
+  if (card) card.focus({ preventScroll: true });
+  current = -1;
+}
+
+function step(d) {
+  const v = visible(), pos = Math.max(0, v.indexOf(current));
+  show(v[(pos + d + v.length) % v.length]);
+  history.replaceState(null, "", "#" + works[current].id);
+}
+
+function show(i) {
+  current = i;
+  const w = works[i];
+  const img = $("lbImg");
+  img.src = w.thumb;                 // instant, then swap in the full-res PNG
+  const hi = new Image();
+  hi.onload = () => { if (current === i) img.src = w.full; };
+  hi.src = w.full;
+  img.alt = w.alt;
+  $("lbGear").textContent = w.gear;
+  $("lbStyle").innerHTML = `in the style of <em>${esc(w.style)}</em>`;
+  const v = visible(), pos = v.indexOf(i);
+  $("lbCount").textContent = `No. ${w.id}` + (pos >= 0 ? ` · ${pos + 1} / ${v.length}` : "");
+
+  const pairs = PAIRS.filter(([ids]) => ids.includes(w.id)).map(([ids, why]) => {
+    const links = ids.filter(id => id !== w.id).map(id => {
+      const o = works.find(x => x.id === id);
+      return o && !o.missing ? `<a data-id="${id}">#${id} ${esc(o.gear)}</a>` : `#${id}`;
+    }).join(", ");
+    return `<p class="pairs">Compare with ${links}. ${esc(why)}</p>`;
+  }).join("");
+
+  $("lbInfo").innerHTML = `
+    <h2>${esc(w.gear)}</h2>
+    <p style="color:#a39d92">${esc(w.category)} · No. ${w.id}${w.core ? " · Core roster" : ""}</p>
+
+    <h3>The portrait</h3>
+    <p>${esc(w.alt)}</p>
+
+    <h3>The art history</h3>
+    <dl>
+      <dt>Style</dt><dd>${esc(w.style)}</dd>
+      <dt>Concept</dt><dd>${esc(w.concept)}</dd>
+    </dl>
+    <p style="margin-top:14px">${esc(w.note)}</p>
+
+    <h3>The gear: what to look for</h3>
+    <p>${esc(w.accurate)}</p>
+
+    ${w.museum ? `<h3>See the real thing nearby</h3><p>${esc(w.museum)}</p>
+      <p style="font-size:14px;color:#8f897e;margin-top:6px">The artist or movement is in that collection; check the museum's site for what's on view.</p>` : ""}
+
+    ${pairs ? `<h3>Side by side</h3>${pairs}` : ""}
+
+    <a class="full" href="${w.full}" target="_blank" rel="noopener">Open full-resolution image ↗</a>`;
+  $("lbInfo").querySelectorAll("[data-id]").forEach(a => a.onclick = () => {
+    const j = works.findIndex(x => x.id === +a.dataset.id);
+    show(j); $("lb").scrollTo({ top: 0 });
+    history.replaceState(null, "", "#" + works[j].id);
+  });
+  $("lb").scrollTo({ top: 0 });
+}
+
+$("lbClose").onclick = close;
+$("lbPrev").onclick = () => step(-1);
+$("lbNext").onclick = () => step(1);
+$("lbMore").onclick = () => $("lbInfo").scrollIntoView({ behavior: "smooth" });
+$("lb").addEventListener("click", e => { if (e.target.classList.contains("lb-stage")) close(); });
+document.addEventListener("keydown", e => {
+  if (current < 0) return;
+  if (e.key === "Escape") close();
+  else if (e.key === "ArrowLeft") step(-1);
+  else if (e.key === "ArrowRight") step(1);
+});
+// swipe left/right on the image
+let sx = null;
+$("lbImg").addEventListener("touchstart", e => sx = e.touches[0].clientX, { passive: true });
+$("lbImg").addEventListener("touchend", e => {
+  if (sx === null) return;
+  const dx = e.changedTouches[0].clientX - sx; sx = null;
+  if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+});
+
+// rotate the artist name in the title
+let ai = 0;
+setInterval(() => {
+  const el = document.querySelector("h1 .who");
+  el.classList.add("out");
+  setTimeout(() => { ai = (ai + 1) % ARTISTS.length; el.textContent = ARTISTS[ai]; el.classList.remove("out"); }, 350);
+}, 2600);
+
+function openFromHash() {
+  const i = works.findIndex(w => w.id === +location.hash.slice(1));
+  if (i >= 0 && i !== current) open(i);
+}
+window.addEventListener("hashchange", openFromHash);
+
+fetch("manifest.csv").then(r => r.text()).then(t => {
+  works = parseCSV(t).map(toWork);
+  render();
+  openFromHash();
+}).catch(() => {
+  $("grid").innerHTML = `<p style="grid-column:1/-1;text-align:center;color:var(--muted)">Couldn't load manifest.csv. If you opened this file directly, serve the folder instead (e.g. <code>python3 -m http.server</code>).</p>`;
+});
+</script>
+</body>
+</html>
